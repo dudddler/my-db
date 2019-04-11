@@ -1,11 +1,8 @@
-
 <!-- Jumbotron -->
-<div class="d-block mx-auto jumbotron text-center blue-grey lighten-5" style="width:600px">
+<div class="d-block mx-auto jumbotron text-center blue-grey lighten-5" style="width:500px">
   <p>
-    <a routerLink="/login">Logout</a>
-  </p>
-
-  
+    <a routerLink="/">Logout</a>
+  </p>  
     <hr class="my-4 pb-2">
       Data is refreshed on January 1, 2019
     <!--Section: Pricing v.3-->
@@ -28,8 +25,8 @@
           <div class="text-center">
             <div class="card-body">
               <h5>Total Investor Capital</h5>
-              <div class="flex-center">
-                <div class="card-circle d-flex justify-content-center align-items-center">
+              <div class="block-center">
+                <div class="card-circle d-block justify-content-center align-items-center">
                   <i class="fas light-blue-text"></i>
                 </div>
               </div>
@@ -54,8 +51,8 @@
           <div class="text-center">
             <div class="card-body">
               <h5>Total Capital Deployed</h5>
-              <div class="flex-center">
-                <div class="card-circle d-flex justify-content-center align-items-center">
+              <div class="block-center">
+                <div class="card-circle d-block justify-content-center align-items-center">
                   <i class="fas fa-chart-bar light-blue-text"></i>
                 </div>
               </div>
@@ -76,16 +73,114 @@
     <!--Grid row-->
   
   </section>
-  <!--Section: Pricing v.3-->
 
 
-
-
-     <!--Accordion wrapper-->
+  <!--Line to new chapter and expend-cart, chart-->
+  <hr class="my-4 pb-2">
+  <div class="card">
   
-  <!--/.Accordion wrapper-->
-      
-      <hr class="my-4 pb-2">
+    <!--Content-->
+    <div class="text-center">
+      <div class="card-body">
+        <h5>Investor Yield</h5>
+        <div class="block-center">
+          <div class="card-circle d-block justify-content-center align-items-center">
+            <i class="fas fa-chart-bar light-blue-text"></i>
+          </div>
+        </div>
+
+        <!--Investor Yieled-->
+        <h2 class="font-weight-bold my-3">7.9%</h2>
+        <p class="grey-text">
+        </p>
+      </div>
+    </div>
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-description>
+            Trends
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <!--Graph with the trends-->
+        <div style="display: block">
+          <canvas mdbChart
+              [chartType]="chartType"
+              [datasets]="chartDatasets"
+              [labels]="chartLabels"
+              [colors]="chartColors"
+              [options]="chartOptions"
+              [legend]="true"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)">
+          </canvas>
+        </div>
+      </mat-expansion-panel>
+      <mat-expansion-panel (opened)="panelOpenState = true"
+                           (closed)="panelOpenState = false">        
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+
+  <!--Line to new chapter and expend-cart, table-->
+  <hr class="my-4 pb-2">
+  <div class="card">
+  
+    <!--Content-->
+    <div class="text-center">
+      <div class="card-body">
+        <h5>Net Interest Margin</h5>
+        <div class="block-center">
+          <div class="card-circle d-block justify-content-center align-items-center">
+            <i class="fas fa-chart-bar light-blue-text"></i>
+          </div>
+        </div>
+
+        <!--Investor Yieled-->
+        <h2 class="font-weight-bold my-3">1.44%</h2>
+        <p class="grey-text">
+        </p>
+      </div>
+    </div>
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-description>
+            Details
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <!--Table with details-->
+        <table class="table table-striped">
+          <thead>
+            <tr>
+
+              <th scope="col">Period</th>
+              <th scope="col">Including Richmond</th>
+              <th scope="col">Excluding Richmond</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+
+              <td>YTD 2018</td>
+              <td>1.44%</td>
+              <td>1.04%</td>
+            </tr>
+            <tr>
+
+              <td>2017</td>
+              <td>2.71%</td>
+              <td>1.04%</td>
+            </tr>
+          </tbody>
+        </table>
+      </mat-expansion-panel>
+      <mat-expansion-panel (opened)="panelOpenState = true"
+                           (closed)="panelOpenState = false">        
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+
 
   </div>
   <!-- Jumbotron -->

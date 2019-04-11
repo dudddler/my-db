@@ -1,16 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material';
+import { IconsModule } from 'angular-bootstrap-md';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    routingComponents,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MDBBootstrapModule.forRoot(),
+    BrowserAnimationsModule,
+    MatIconModule,
+    IconsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -62,16 +62,13 @@
               <p class="grey-text">
               </p>
             </div>
-          </div>
-  
+          </div>  
         </div>
         <!--Card-->
       </div>
-      <!--Grid column-->
-  
+      <!--Grid column-->  
     </div>
-    <!--Grid row-->
-  
+    <!--Grid row-->  
   </section>
 
 
@@ -136,7 +133,7 @@
           </div>
         </div>
 
-        <!--Investor Yieled-->
+        <!--Net Interest Margin-->
         <h2 class="font-weight-bold my-3">1.44%</h2>
         <p class="grey-text">
         </p>
@@ -180,6 +177,45 @@
       </mat-expansion-panel>
     </mat-accordion>
   </div>
+
+
+   <!--Line to new chapter and expend-cart, chart-->
+   <hr class="my-4 pb-2">
+   <div class="card">
+   
+     <!--Content-->
+     <div class="text-center">
+       <div class="card-body">
+         <h5>Porfolio by Indusries</h5>
+         <div class="block-center">
+           <div class="card-circle d-block justify-content-center align-items-center">
+             <i class="fas fa-chart-bar light-blue-text"></i>
+           </div>
+         </div>
+ 
+         <!--Investor Yieled-->
+         <h6 class="font-weight-lighter my-3">Hospitality is 67% at $153M</h6>
+         <p class="grey-text">
+         </p>
+       </div>
+     </div>       
+      <!--Graph with the trends-->
+      <div style="display: block">
+        <canvas mdbChart
+            [chartType]="chartTypeP"
+            [datasets]="chartDatasetsP"
+            [labels]="chartLabelsP"
+            [colors]="chartColorsP"
+            [options]="chartOptionsP"
+            [legend]="true"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)">
+        </canvas>
+        <p></p>
+      </div>     
+   </div>
+
+
 
 
   </div>

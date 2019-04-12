@@ -32,6 +32,29 @@ export class DashboardComponent implements OnInit {
   public chartHovered(e: any): void { }
 
 
+  //This is code that controls the charts data
+  //pie chart for portfolio by industries
+  public chartTypeP: string = 'pie';
+
+  public chartDatasetsP: Array<any> = [
+    { data: [153, 30, 38, 7], label: 'My First dataset' }
+  ];
+
+  public chartLabelsP: Array<any> = ['Hospitality', 'Solar & Other', 'Healthcare', 'Industrial'];
+
+  public chartColorsP: Array<any> = [
+    {
+      backgroundColor: ['#607d8b', '#46BFBD', '#FDB45C', '#81d4fa'],
+      hoverBackgroundColor: ['#78909c', '#5AD3D1', '#FFC870', '#b3e5fc'],
+      borderWidth: 2,
+    }
+  ];
+
+  public chartOptionsP: any = {
+    responsive: true
+  };
+
+
   //colapse code
   panelOpenState = false;  
 

@@ -50,6 +50,24 @@ export class DashboardComponent implements OnInit {
     }
   ];
 
+  //This is code that controls the charts data
+  //pie chart for income breakdown
+  public chartTypeP_Inc: string = 'pie';
+
+  public chartDatasetsP_Inc: Array<any> = [
+    { data: [2.89, 2.66, 1.6, 0.2, 1.2], label: 'My First dataset' }
+  ];
+
+  public chartLabelsP_Inc: Array<any> = ['Interest', 'Origination Fee', 'Servicing & Other Fee', 'Strip', 'Gain on Sale'];
+
+  public chartColorsP_Inc: Array<any> = [
+    {
+      backgroundColor: ['#607d8b', '#46BFBD', '#FDB45C', '#81d4fa', '#c5cae9'],
+      hoverBackgroundColor: ['#78909c', '#5AD3D1', '#FFC870', '#b3e5fc', '#e8eaf6'],
+      borderWidth: 2,
+    }
+  ];
+
   public chartOptionsP: any = {
     responsive: true
   };
